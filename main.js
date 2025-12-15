@@ -126,11 +126,13 @@ function multiply_matrix() {
     // Multiply
     let arr = []
 
-    arr[0] = value1 * value5
-    arr[1] = value2 * value6
-    arr[2] = value3 * value7
-    arr[3] = value4 * value8
+    arr[0] = value1 * value5 + value2 * value7
 
+    arr[1] = value1 * value6 + value2 * value8
+
+    arr[2] = value3 * value5 + value4 * value7
+
+    arr[3] = value3 * value6 + value4 * value8
 
     // Display results
     // document.getElementById("matrix-r1").innerText = arr[0];
