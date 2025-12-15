@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <header class="app-header">
+            <h1><i class="fas fa-calculator"></i> Matrices Calculator</h1>
+            <div class="matrix-container">
+
+                <a href="/index.html">2x2</a>
+                <a href="/matrix3.html">3x3</a>
+                <a href="/matrix4.html">4x4</a>
+
+            </div>
+        </header>
+
+        <main class="calculator-wrapper">
+            <div class="matrix-input-section">
+                <div class="matrix-box">
+                    <h3><i class="fas fa-th"></i> Matrix A</h3>
+                    <div class="matrix-grid">
+                        <input type="number" id="matrix-1" placeholder="0" maxlength="3" oninput="limitDigits(this)">
+                        <input type="number" id="matrix-2" placeholder="0" maxlength="3" oninput="limitDigits(this)">
+                        <input type="number" id="matrix-3" placeholder="0" maxlength="3" oninput="limitDigits(this)">
+                        <input type="number" id="matrix-4" placeholder="0" maxlength="3" oninput="limitDigits(this)">
+                    </div>
+                </div>
+
+
+                <div class="matrix-box">
+                    <h3><i class="fas fa-th"></i> Matrix B</h3>
+                    <div class="matrix-grid">
+                        <input type="number" id="matrix-5" placeholder="0" maxlength="3" oninput="limitDigits(this)">
+                        <input type="number" id="matrix-6" placeholder="0" maxlength="3" oninput="limitDigits(this)">
+                        <input type="number" id="matrix-7" placeholder="0" maxlength="3" oninput="limitDigits(this)">
+                        <input type="number" id="matrix-8" placeholder="0" maxlength="3" oninput="limitDigits(this)">
+                    </div>
+
+                </div>
+
+                <div class="matrix-box">
+                    <h3><i class="fas fa-th"></i> Matrix C</h3>
+                    <div class="matrix-grid">
+                        <input type="number" id="matrix-9" placeholder="0" maxlength="3" oninput="limitDigits(this)">
+                        <input type="number" id="matrix-10" placeholder="0" maxlength="3" oninput="limitDigits(this)">
+                        <input type="number" id="matrix-11" placeholder="0" maxlength="3" oninput="limitDigits(this)">
+                        <input type="number" id="matrix-12" placeholder="0" maxlength="3" oninput="limitDigits(this)">
+                    </div>
+
+                </div>
+
+                <div class="matrix-box">
+                    <h3><i class="fas fa-th"></i> Matrix D</h3>
+                    <div class="matrix-grid">
+                        <input type="number" id="matrix-13" placeholder="0" maxlength="3" oninput="limitDigits(this)">
+                        <input type="number" id="matrix-14" placeholder="0" maxlength="3" oninput="limitDigits(this)">
+                        <input type="number" id="matrix-15" placeholder="0" maxlength="3" oninput="limitDigits(this)">
+                        <input type="number" id="matrix-16" placeholder="0" maxlength="3" oninput="limitDigits(this)">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="operations-section">
+                <h3><i class="fas fa-sliders-h"></i> Operations</h3>
+                <div class="buttons-grid">
+                    <button class="operation-btn add-btn" onclick="add_matrix()">
+                        <i class="fas fa-plus-circle"></i> Addition (A + B)
+                    </button>
+                    <button class="operation-btn subtract-btn" onclick="subtract_matrix()">
+                        <i class="fas fa-minus-circle"></i> Subtract (A - B)
+                    </button>
+                    <button class="operation-btn multiply-btn" onclick="multiply_matrix()">
+                        <i class="fas fa-times-circle"></i> Multiply (A x B)
+                    </button>
+                    <button class="operation-btn determinant-btn" onclick="division_matrix()">
+                        <i class="fas fa-divide"></i> Division (A / B)
+                    </button>
+                </div>
+                <div class="operation-note">
+                    <i class="fas fa-info-circle"></i> Note: For current operations, please enter numbers between
+                    1-100
+                    to avoid "ERR" results (3-digit limit).
+                </div>
+            </div>
+
+            <div class="result-section">
+                <h2><i class="fas fa-poll"></i> Result Matrix</h2>
+                <div class="matrix-box result-matrix">
+                    <div class="matrix-grid">
+                        <div class="result-cell" id="matrix-r1" maxlength="3" oninput="limitDigits(this)">0</div>
+                        <div class="result-cell" id="matrix-r2" maxlength="3" oninput="limitDigits(this)">0</div>
+                        <div class="result-cell" id="matrix-r3" maxlength="3" oninput="limitDigits(this)">0</div>
+                        <div class="result-cell" id="matrix-r4" maxlength="3" oninput="limitDigits(this)">0</div>
+                    </div>
+                </div>
+
+                <div class="result-actions">
+                    <button class="action-btn copy-btn">
+                        <i class="far fa-copy"></i> Copy Result
+                    </button>
+                    <button class="action-btn clear-btn" onclick="clear_matrix()">
+                        <i class="fas fa-eraser"></i> Clear All
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <p><i class="fas fa-code"></i> Built with HTML5, CSS3 & JavaScript</p>
+            <p class="footer-note">Supports 2×2 | 3×3 | 4×4 matrix operations | More features coming soon</p>
+        </footer>
+    </div>
+
+    <script src="matrix4.js"></script>
+</body>
+
+</html>
