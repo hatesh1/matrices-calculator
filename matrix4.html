@@ -89,9 +89,6 @@
                     <button class="operation-btn multiply-btn" onclick="multiply_matrix()">
                         <i class="fas fa-times-circle"></i> Multiply (A x B)
                     </button>
-                    <button class="operation-btn determinant-btn" onclick="division_matrix()">
-                        <i class="fas fa-divide"></i> Division (A / B)
-                    </button>
                 </div>
                 <div class="operation-note">
                     <i class="fas fa-info-circle"></i> Note: For current operations, please enter numbers between
@@ -122,15 +119,10 @@
                         <div class="result-cell" id="matrix-r16" maxlength="3" oninput="limitDigits(this)">0</div>
 
 
-
-
                     </div>
                 </div>
 
                 <div class="result-actions">
-                    <button class="action-btn copy-btn">
-                        <i class="far fa-copy"></i> Copy Result
-                    </button>
                     <button class="action-btn clear-btn" onclick="clear_matrix()">
                         <i class="fas fa-eraser"></i> Clear All
                     </button>

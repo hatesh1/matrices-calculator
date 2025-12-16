@@ -247,11 +247,6 @@ input[type=number] {
     color: white;
 }
 
-.determinant-btn {
-    background: linear-gradient(135deg, #9b59b6, #8e44ad);
-    color: white;
-}
-
 .operation-note {
     background: rgba(52, 152, 219, 0.1);
     border-left: 4px solid #3498db;
@@ -307,11 +302,11 @@ input[type=number] {
     border: 2px solid rgba(46, 204, 113, 0.1);
 }
 
-.result-actions {
+/* .result-actions {
     display: flex;
     gap: 15px;
     justify-content: center;
-}
+} */
 
 .action-btn {
     padding: 14px 30px;
@@ -324,12 +319,6 @@ input[type=number] {
     align-items: center;
     gap: 10px;
     transition: all 0.3s ease;
-}
-
-.copy-btn {
-    background: rgba(52, 152, 219, 0.15);
-    color: #3498db;
-    border: 1px solid rgba(52, 152, 219, 0.3);
 }
 
 .clear-btn {
